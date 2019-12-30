@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 14vh;
+    box-shadow: 2px 2px #d6d5d4;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header div img {
+    height: 100%;
+}
+
+header div p {
+    margin-left: 2vh;
+}
+
+header input {
+    width: 51vh;
+    height: 4.1vh;
+    background: #f7f6f6 url("../../assets/imgs/lupa.png") no-repeat;
+    background-position-x: 97%;
+    background-position-y: 50%;
+    padding-left: 10px;
+    border: 1.2px solid #e7e7e7;
+    border-radius: 3px;
+    transition: 0.7s ease-out;
+    outline: none;
+    margin-left: 5vh;
+}
+
+header input:focus {
+    background-position-x: 115%;
+}
+
+
