@@ -9,10 +9,13 @@ class HomePage extends Component {
 
         console.log(setLoading, loading);
 
+        // setLoading(true);
+
         return (
             <>
                 <Header/>
                 {
+
                     loading ? <div>Loading...</div> :
                         <Main/>
                 }

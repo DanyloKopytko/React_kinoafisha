@@ -1,5 +1,4 @@
 import {connect} from 'react-redux';
-import {withRouter} from 'react-router';
 
 import HomePageComponent from './HomePage';
 
@@ -17,6 +16,7 @@ const mapDispatchToProps = {
     setLoading
 };
 
-const HomePageWithConnect = connect(mapStateToProps, mapDispatchToProps)(HomePageComponent);
-
-export default withRouter(HomePageWithConnect);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(HomePageComponent);
