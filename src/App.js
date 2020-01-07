@@ -7,7 +7,7 @@ import {
 
 import './App.css';
 
-import HomePage from './containers/HomePage/HomePage';
+import HomePage from './containers/HomePage';
 
 export default function App() {
     return (
@@ -17,7 +17,7 @@ export default function App() {
                     <HomePage />
                 </Route>
                 <Route path="*">
-                    <div>Error 404 page was not found</div>
+                    <div>Error 404 page not found</div>
                 </Route>
             </Switch>
         </Router>

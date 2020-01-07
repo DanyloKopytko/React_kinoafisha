@@ -2,14 +2,26 @@ import React, {Component} from 'react';
 
 import './Main.css';
 
-export default class Main extends Component{
+import {MoviesList} from '../index';
+
+export default class Main extends Component {
+    componentDidMount() {
+        const {getAllMovies, getGenres} = this.props;
+
+        getAllMovies();
+        getGenres();
+    }
 
     render() {
+        const {loading, movies, genres, darkTheme} = this.props;
+
+        let results = movies.results;
+
         return (
-            <main>
-                <section className="listOfFilms">
-                    <h1>1</h1>
-                </section>
+            <main className={darkTheme ? 'mainDarkTheme' : ''}>
+                {loading ? <div>Loading...</div> :
+                  <MoviesList movies={results} genres={genres}/>
+                }
             </main>
         );
     }

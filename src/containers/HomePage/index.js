@@ -1,22 +1,31 @@
 import {connect} from 'react-redux';
+import { withRouter } from 'react-router';
 
 import HomePageComponent from './HomePage';
 
-import {setLoading} from '../../actions';
+import {setLoading, getAllMovies, getGenres, setDarkTheme} from '../../actions';
 
 const mapStateToProps = (state) => {
-    const {pageMain: {loading}} = state;
+    const {pageMain: {loading, movies, genres, darkTheme}} = state;
 
     return {
-        loading
+        loading,
+        movies,
+        genres,
+        darkTheme
     };
 };
 
 const mapDispatchToProps = {
-    setLoading
+    setLoading,
+    getAllMovies,
+    getGenres,
+    setDarkTheme
 };
 
-export default connect(
+const HomePageWithConnect = connect(
     mapStateToProps,
     mapDispatchToProps
 )(HomePageComponent);
+
+export default withRouter(HomePageWithConnect);

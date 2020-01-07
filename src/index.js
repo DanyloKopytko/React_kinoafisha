@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
+import thunk from 'redux-thunk';
+import {composeWithDevTools} from 'redux-devtools-extension';
 
 import reducer from './reducers';
 
@@ -11,8 +13,15 @@ import App from './App';
 
 import * as serviceWorker from './serviceWorker';
 
+// export const logger = store => next => action => {
+//     return next(action);
+// };
+
 const store = createStore(
-    reducer
+    reducer,
+    composeWithDevTools(
+        applyMiddleware(thunk)
+    )
 );
 
 ReactDOM.render(

@@ -37,4 +37,7 @@ header input:focus {
     background-position-x: 115%;
 }
 
+.headerDarkTheme {
+    background-color: #2b2727;
+}
 
