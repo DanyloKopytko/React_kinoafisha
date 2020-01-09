@@ -1,4 +1,4 @@
-header {
+header > div {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -37,7 +37,38 @@ header input:focus {
     background-position-x: 115%;
 }
 
+.responsiveHeader {
+    display: none;
+}
+
 .headerDarkTheme {
     background-color: #2b2727;
+}
+
+@media screen and (max-width: 950px) {
+    header > div {
+        display: none;
+    }
+
+    .responsiveHeader {
+        display: flex;
+        box-shadow: none;
+    }
+
+    .responsiveHeader button:last-child {
+        width: 7%;
+        height: 45%;
+        background-color: #fbfbfb;
+        border: 1px solid #e7e7e7;
+        border-radius: 4px;
+    }
+
+    .responsiveHeader button:last-child img {
+        height: fit-content;
+    }
+
+    main {
+        background-color: white !important;
+    }
 }
 

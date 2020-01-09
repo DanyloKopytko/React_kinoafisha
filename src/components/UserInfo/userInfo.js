@@ -1,9 +1,12 @@
 import React from "react";
 
-import {pinballLogo} from "../../assets/imgs";
+import {userAvatar} from "../../assets/imgs";
 
 const userInfo = () => (
-    <a href="/"><img src={pinballLogo} alt="Pinball logo"/></a>
+    <div>
+        <img src={userAvatar} alt="userAvatar"/>
+        <p>Welcome John</p>
+    </div>
 );
 
 export default userInfo;

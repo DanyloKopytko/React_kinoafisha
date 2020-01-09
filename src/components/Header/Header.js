@@ -2,7 +2,7 @@ import React, {Component} from "react";
 
 import './Header.css';
 
-import {userAvatar} from '../../assets/imgs';
+import {pinballLogo, lupa} from '../../assets/imgs';
 
 import {BurgerMenu, userInfo, Toggle} from '../index';
 
@@ -34,23 +34,27 @@ export default class Header extends Component {
     }
 
     render() {
-        const { isDarkTheme } = this.state;
+        const {isDarkTheme} = this.state;
         const {darkTheme} = this.props;
 
         return (
             <header className={darkTheme ? 'headerDarkTheme' : ``}>
-                {userInfo()}
                 <div>
-                    <BurgerMenu/>
-                    <input type="text" onChange={this.onInputHandle}/>
+                    <a href="/"><img src={pinballLogo} alt="Pinball logo"/></a>
+                    <div>
+                        <BurgerMenu/>
+                        <input type="text" onChange={this.onInputHandle}/>
+                    </div>
+                    <Toggle
+                        checked={isDarkTheme}
+                        handleToggle={this.onToggleClick}
+                    />
+                    {userInfo()}
                 </div>
-                <Toggle
-                    checked={isDarkTheme}
-                    handleToggle={this.onToggleClick}
-                />
-                <div>
-                    <img src={userAvatar} alt="userAvatar"/>
-                    <p>Welcome John</p>
+                <div className={'responsiveHeader'}>
+                    <BurgerMenu/>
+                    <a href="/"><img src={pinballLogo} alt="Pinball logo"/></a>
+                    <button><img src={lupa} alt="lupa"/></button>
                 </div>
             </header>
         );

@@ -19,10 +19,6 @@
     margin: 0 0 3% 0;
 }
 
-.listOfFilms > div:hover {
-    width: 32%;
-}
-
 .posterPreview {
     height: 60vh;
 }
@@ -90,10 +86,6 @@
         width: 48%;
     }
 
-    .listOfFilms > div:hover {
-        width: 49%;
-    }
-
     .listOfFilms > div:nth-child(3n) {
         margin: 0 3% 3% 0;
     }
@@ -105,14 +97,10 @@
 
 @media screen and (max-width: 900px) {
     .listOfFilms > div {
-        width: 98%;
-    }
-
-    .listOfFilms > div:hover {
-        width: 98%;
+        width: 100%;
     }
 
     .listOfFilms > div:nth-child(n) {
-        margin: 0 0 3% 0;
+        margin: 0 0 10% 0;
     }
 }
