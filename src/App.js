@@ -8,6 +8,7 @@ import {
 import './App.css';
 
 import HomePage from './containers/HomePage';
+import SingleMovie from './containers/SingleMovie';
 
 export default function App() {
     return (
@@ -16,6 +17,7 @@ export default function App() {
                 <Route exact path="/">
                     <HomePage />
                 </Route>
+                <Route path="/movie/:movieTitle" component={SingleMovie}/>
                 <Route path="*">
                     <div>Error 404 page not found</div>
                 </Route>

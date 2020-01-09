@@ -41,7 +41,11 @@
     color: #acaaaa;
 }
 
-.movieInfo h3,
+.movieInfo h3 {
+    padding: 3% 0 3% 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
 .movieInfo p {
     margin: 3% 0 3% 0;
     font-family: 'Open Sans', sans-serif;

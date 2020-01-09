@@ -9,7 +9,7 @@ export default class MoviesListCard extends Component {
 
         return (
             <div className={`${movie.original_title}`}>
-                <PosterPreview poster_path={movie.poster_path} movieTitle={movie.original_title}/>
+                <PosterPreview poster_path={movie.poster_path} movieTitle={movie.original_title} id={movie.id}/>
                 <MovieInfo movieTitle={movie.original_title} movieDescription={movie.overview} genres={genres} genre_ids={movie.genre_ids} movieRating={movie.vote_average}/>
             </div>
         );
